@@ -1,0 +1,9 @@
+extends ../layouts/layout.pug
+
+block content
+  h1 All Posts
+  a(href='/posts/create') Create New Post
+  ul
+    each post in posts
+      li
+        a(href=`/posts/${post.id}`) #{post.title}
