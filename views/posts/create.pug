@@ -1,0 +1,12 @@
+extends ../layouts/layout.pug
+
+block content
+  h1 Create New Post
+  form(action='/posts', method='post')
+    div
+      label(for='title') Title:
+      input(type='text', name='title', id='title')
+    div
+      label(for='content') Content:
+      textarea(name='content', id='content')
+    button(type='submit') Submit
